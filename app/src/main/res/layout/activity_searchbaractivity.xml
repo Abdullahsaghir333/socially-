@@ -1,0 +1,364 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:fitsSystemWindows="true"
+    android:background="@color/white"
+    android:padding="16dp">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="34dp">
+
+    </LinearLayout>
+
+    <!-- Search bar row -->
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <!-- Clear chip + label on the right -->
+        <LinearLayout
+            android:id="@+id/clearGroup"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"
+            android:orientation="horizontal"
+            android:gravity="center_vertical">
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/searchbarback"
+
+
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                app:cardCornerRadius="24dp"
+                app:cardElevation="0dp"
+
+                app:cardUseCompatPadding="false"
+                app:cardBackgroundColor="#D9D9D9"
+                android:clickable="true"
+                android:focusable="true"
+                android:foreground="?attr/selectableItemBackgroundBorderless"
+                android:contentDescription="Clear search">
+
+                <ImageView
+
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:clickable="true"
+                    android:src="@drawable/close"
+                    app:tint="@color/white" />
+            </androidx.cardview.widget.CardView>
+
+            <TextView
+                android:id="@+id/tvClear"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:text="clear"
+                android:textSize="14sp"
+                android:textStyle="bold"
+                android:textColor="@color/biege"/>
+        </LinearLayout>
+
+        <!-- Rounded search field -->
+        <androidx.cardview.widget.CardView
+            android:id="@+id/searchCard"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_centerVertical="true"
+            android:layout_toStartOf="@id/clearGroup"
+            android:layout_marginEnd="12dp"
+            app:cardCornerRadius="22dp"
+            app:cardElevation="0dp"
+            app:cardUseCompatPadding="false"
+            app:cardBackgroundColor="#F1F1F1">
+
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <EditText
+                    android:id="@+id/search1"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@android:color/transparent"
+                    android:hint="Search"
+                    android:singleLine="true"
+                    android:textSize="16sp"
+                    android:textColor="@color/black"
+                    android:textColorHint="@color/biege"
+                    android:paddingStart="40dp"
+                    android:paddingEnd="14dp"
+                    android:imeOptions="actionSearch"/>
+
+                <ImageView
+                    android:id="@+id/search_icon"
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:layout_gravity="start|center_vertical"
+                    android:layout_marginStart="12dp"
+                    android:src="@drawable/search"
+                    app:tint="@color/black"/>
+            </FrameLayout>
+        </androidx.cardview.widget.CardView>
+
+    </RelativeLayout>
+
+    <!-- Tabs -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="44dp"
+        android:orientation="horizontal"
+        android:weightSum="4"
+        android:paddingTop="16dp"
+        android:paddingBottom="8dp">
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            android:gravity="center">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Top"
+                android:textStyle="bold"
+                android:textColor="@color/black"/>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="2dp"
+                android:layout_marginTop="4dp"
+                android:background="@android:color/black"/>
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:textColor="#D3D3D3"
+            android:text="Accounts"
+            android:textStyle="bold"/>
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:textColor="#D3D3D3"
+            android:text="Tags"
+            android:textStyle="bold"/>
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:textColor="#D3D3D3"
+            android:text="Places"
+            android:textStyle="bold"/>
+    </LinearLayout>
+
+    <!-- User List - ScrollView for multiple users -->
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingTop="8dp">
+
+            <!-- User 1 -->
+            <LinearLayout
+                android:id="@+id/searchbaruser1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:padding="12dp"
+                android:gravity="center_vertical">
+
+                <TextView
+                    android:layout_width="54dp"
+                    android:layout_height="54dp"
+                    android:background="@drawable/circle"
+                    android:elevation="2dp"
+                    android:gravity="center"
+                    android:text="IS"
+                    android:backgroundTint="#0000fF"
+                    android:textColor="@color/white"
+                    android:textSize="16sp"
+                    android:textStyle="bold" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_marginStart="12dp">
+
+                    <TextView
+                        android:id="@+id/searchbarprofileview1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="intersahal"
+                        android:textColor="@color/black"
+                        android:textSize="16sp"
+                        android:textStyle="bold"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="intersahal"
+                        android:textColor="#D3D3D3"
+                        android:textSize="14sp"
+                        android:layout_marginTop="2dp"/>
+                </LinearLayout>
+            </LinearLayout>
+
+            <!-- User 2 -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:padding="12dp"
+                android:gravity="center_vertical">
+
+                <TextView
+                    android:layout_width="54dp"
+                    android:layout_height="54dp"
+                    android:background="@drawable/circle"
+                    android:backgroundTint="@color/d3d3d3"
+                    android:text="JD"
+                    android:gravity="center"
+                    android:textColor="@color/black"
+                    android:textStyle="bold"
+                    android:textSize="16sp"
+                    android:elevation="2dp"/>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_marginStart="12dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="John Doe"
+                        android:textColor="@color/black"
+                        android:textSize="16sp"
+                        android:textStyle="bold"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="johndoe"
+                        android:textColor="#D3D3D3"
+                        android:textSize="14sp"
+                        android:layout_marginTop="2dp"/>
+                </LinearLayout>
+            </LinearLayout>
+
+            <!-- User 3 -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:padding="12dp"
+                android:gravity="center_vertical">
+
+                <TextView
+                    android:layout_width="54dp"
+                    android:layout_height="54dp"
+                    android:background="@drawable/circle"
+                    android:backgroundTint="@color/d3d3d3"
+                    android:text="AS"
+                    android:gravity="center"
+                    android:textColor="@color/black"
+                    android:textStyle="bold"
+                    android:textSize="16sp"
+                    android:elevation="2dp"/>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_marginStart="12dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Alice Smith"
+                        android:textColor="@color/black"
+                        android:textSize="16sp"
+                        android:textStyle="bold"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="alicesmith"
+                        android:textColor="#D3D3D3"
+                        android:textSize="14sp"
+                        android:layout_marginTop="2dp"/>
+                </LinearLayout>
+            </LinearLayout>
+
+            <!-- User 4 -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:padding="12dp"
+                android:gravity="center_vertical">
+
+                <TextView
+                    android:layout_width="54dp"
+                    android:layout_height="54dp"
+                    android:background="@drawable/circle"
+                    android:backgroundTint="@color/d3d3d3"
+                    android:text="MB"
+                    android:gravity="center"
+                    android:textColor="@color/black"
+                    android:textStyle="bold"
+                    android:textSize="16sp"
+                    android:elevation="2dp"/>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_marginStart="12dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Mike Brown"
+                        android:textColor="@color/black"
+                        android:textSize="16sp"
+                        android:textStyle="bold"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="mikebrown"
+                        android:textColor="#D3D3D3"
+                        android:textSize="14sp"
+                        android:layout_marginTop="2dp"/>
+                </LinearLayout>
+            </LinearLayout>
+
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>

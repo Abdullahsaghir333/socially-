@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:gravity="center"
+    android:background="@color/white"
+    android:weightSum="10"
+    android:fitsSystemWindows="true"
+    android:padding="24dp"
+>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="2"
+        android:text="Socially"
+        android:textColor="@color/biege"
+        android:textSize="34sp"
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:fontFamily="sans-serif-medium" />
+
+    <!-- Outer Ring CardView -->
+
+        <!-- Middle Ring CardView -->
+        <androidx.cardview.widget.CardView
+            android:id="@+id/highlight1"
+            android:layout_width="150dp"
+            android:layout_height="150dp"
+            android:layout_gravity="center"
+            app:cardCornerRadius="75dp"
+            app:cardElevation="0dp"
+            app:cardBackgroundColor="@color/white">
+
+            <!-- Inner Profile Image CardView -->
+            <androidx.cardview.widget.CardView
+                android:layout_width="130dp"
+                android:layout_height="130dp"
+                android:layout_gravity="center"
+                app:cardCornerRadius="65dp"
+                app:cardElevation="0dp"
+                app:cardBackgroundColor="@android:color/transparent">
+
+                <!-- Profile Image -->
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center"
+                    android:background="@drawable/circle"
+                    android:clipToOutline="true"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/img_4" />
+
+            </androidx.cardview.widget.CardView>
+        </androidx.cardview.widget.CardView>
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:text="jacob_w"
+        android:textColor="@color/black"
+        android:textSize="18sp"
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:fontFamily="sans-serif" />
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="280dp"
+        android:layout_height="8dp"
+        android:layout_weight="1"
+        android:layout_gravity="center"
+        app:cardCornerRadius="8dp"
+        app:cardElevation="0dp"
+        app:cardBackgroundColor="@color/biege"
+        android:layout_marginVertical="16dp">
+
+        <TextView
+            android:id="@+id/logintbn1"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/biege"
+            android:text="Log in"
+            android:textColor="@color/white"
+            android:textSize="16sp"
+            android:fontFamily="sans-serif-medium"
+            android:elevation="0dp"
+            style="?android:attr/borderlessButtonStyle" />
+
+    </androidx.cardview.widget.CardView>
+
+    <TextView
+        android:id="@+id/switchaccount"
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:layout_weight="4"
+        android:text="Switch accounts"
+        android:textColor="@color/biege"
+        android:textSize="16sp"
+        android:gravity="center"
+        android:layout_marginTop="24dp" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:orientation="horizontal"
+        android:gravity="center">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Don't have an account? "
+            android:textSize="14sp"
+            android:textColor="#666666"
+            android:gravity="center" />
+
+        <TextView
+            android:id="@+id/signup"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Sign up."
+            android:textSize="14sp"
+            android:textColor="@color/biege"
+            android:gravity="center"
+            android:textStyle="bold" />
+
+    </LinearLayout>
+
+</LinearLayout>

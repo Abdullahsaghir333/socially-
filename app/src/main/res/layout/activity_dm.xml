@@ -1,0 +1,251 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:fitsSystemWindows="true"
+    android:background="@color/white">
+
+    <!-- Status Bar -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="24dp"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        android:paddingHorizontal="16dp"
+        android:background="@color/white">
+
+
+
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical">
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="4dp"
+            app:tint="@color/black"/>
+        </LinearLayout>
+    </LinearLayout>
+
+    <!-- Header -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="56dp"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        android:paddingHorizontal="16dp"
+        android:background="@color/white"
+        android:elevation="1dp">
+
+        <ImageView
+            android:id="@+id/dmback1"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:src="@drawable/back"
+            android:layout_marginEnd="12dp"
+            app:tint="@color/biege"/>
+
+        <!-- Profile Picture -->
+        <androidx.cardview.widget.CardView
+            android:layout_width="32dp"
+            android:layout_height="32dp"
+            app:cardCornerRadius="16dp"
+            app:cardElevation="0dp"
+            app:cardBackgroundColor="@color/biege">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text="IS"
+                android:gravity="center"
+                android:textColor="@color/white"
+                android:textStyle="bold"
+                android:textSize="12sp"/>
+        </androidx.cardview.widget.CardView>
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:layout_marginStart="8dp"
+            android:text="internshala"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            android:textColor="@color/black"/>
+
+        <!-- Header Icons -->
+
+        <ImageView
+            android:id="@+id/voicecall"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:layout_marginEnd="16dp"
+            android:src="@drawable/videocall"
+            app:tint="@color/black" />
+
+        <ImageView
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:src="@drawable/information"
+            app:tint="@color/biege"/>
+    </LinearLayout>
+
+    <!-- Chat Area -->
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:fillViewport="true"
+        android:background="@color/white">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="16dp">
+
+            <!-- Message Bubble -->
+            <androidx.cardview.widget.CardView
+                android:id="@+id/messageBubble"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_alignParentEnd="true"
+                android:layout_marginStart="80dp"
+                android:layout_marginBottom="24dp"
+                app:cardCornerRadius="18dp"
+                app:cardElevation="1dp"
+                app:cardBackgroundColor="@color/biege">
+
+                <TextView
+                    android:id="@+id/text1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Hello"
+                    android:textColor="@color/white"
+                    android:textSize="16sp"
+                    android:paddingHorizontal="16dp"
+                    android:paddingVertical="10dp"
+                    android:minWidth="60dp"/>
+            </androidx.cardview.widget.CardView>
+
+            <!-- Time Stamp -->
+            <TextView
+                android:id="@+id/timeStamp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_above="@id/messageBubble"
+                android:layout_centerHorizontal="true"
+                android:layout_marginBottom="8dp"
+                android:text="4:40 PM"
+                android:textColor="@color/transparent"
+                android:textSize="12sp"
+                android:paddingHorizontal="8dp"
+                android:paddingVertical="4dp"/>
+
+        </RelativeLayout>
+
+    </ScrollView>
+
+    <!-- Message Input Area -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:background="@color/white"
+        android:elevation="4dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="56dp"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:paddingHorizontal="12dp"
+            android:paddingVertical="8dp">
+
+            <!-- Profile Picture in Input -->
+            <androidx.cardview.widget.CardView
+                android:layout_width="42dp"
+                android:layout_height="42dp"
+                app:cardCornerRadius="16dp"
+                app:cardElevation="0dp"
+                app:cardBackgroundColor="@color/biege">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/camerafill"
+                    android:backgroundTint="@color/white"
+                    android:gravity="center"
+                    android:textColor="@color/white"
+                    android:textSize="10sp"
+                    android:textStyle="bold"
+                    app:tint="@color/white" />
+            </androidx.cardview.widget.CardView>
+
+            <!-- Message Input Field -->
+            <androidx.cardview.widget.CardView
+                android:layout_width="0dp"
+                android:layout_height="40dp"
+                android:layout_weight="1"
+                android:layout_marginStart="8dp"
+                android:layout_marginEnd="8dp"
+                app:cardCornerRadius="20dp"
+                app:cardElevation="0dp"
+                app:cardBackgroundColor="@color/white">
+
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@android:color/transparent"
+                    android:gravity="center_vertical"
+                    android:hint="Message..."
+                    android:maxLines="1"
+                    android:paddingStart="16dp"
+                    android:paddingEnd="16dp"
+                    android:textColor="@color/black"
+                    android:textColorHint="@color/transparent"
+                    android:textSize="14sp"
+                    tools:ignore="TouchTargetSizeCheck" />
+            </androidx.cardview.widget.CardView>
+
+            <!-- Input Action Icons -->
+            <ImageView
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:src="@drawable/voice"
+                android:layout_marginEnd="8dp"
+                app:tint="@color/black"/>
+
+            <ImageView
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:src="@drawable/gallery"
+                android:layout_marginEnd="8dp"
+                app:tint="@color/black"/>
+
+            <ImageView
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:src="@drawable/camera"
+                app:tint="@color/transparent"/>
+        </LinearLayout>
+
+        <!-- Bottom Navigation Indicator -->
+        <View
+            android:layout_width="134dp"
+            android:layout_height="4dp"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="4dp"
+            android:layout_marginBottom="8dp"
+            android:background="@drawable/bottom"
+            android:backgroundTint="@color/biege"/>
+    </LinearLayout>
+
+</LinearLayout>

@@ -1,0 +1,235 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:fitsSystemWindows="true"
+    android:layout_height="match_parent"
+    android:background="@color/black"
+    android:orientation="vertical"
+    tools:context=".storyview">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:background="@color/black"/>
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="780dp"
+        android:background="@color/black">
+        <androidx.cardview.widget.CardView
+            app:cardCornerRadius="30dp"
+            android:id="@+id/story"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <ImageView
+
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@drawable/img_6" />
+
+        </androidx.cardview.widget.CardView>
+       <LinearLayout
+           android:id="@+id/storystatus"
+           android:layout_width="match_parent"
+           android:layout_height="wrap_content"
+           android:orientation="horizontal"
+           android:layout_marginTop="10dp"
+           android:elevation="10dp"
+           android:weightSum="3">
+           <ImageView
+               android:id="@+id/s1"
+               android:layout_width="0dp"
+               android:layout_height="4dp"
+               android:layout_weight="1"
+               android:src="@drawable/homeindicator"
+               app:tint="@color/d3d3d3"/>
+                <ImageView
+               android:id="@+id/s2"
+               android:layout_width="0dp"
+               android:layout_height="4dp"
+               android:layout_weight="1"
+               android:src="@drawable/homeindicator"
+               app:tint="@color/d3d3d3"/>
+           <ImageView
+               android:id="@+id/s3"
+               android:layout_width="0dp"
+               android:layout_height="4dp"
+               android:layout_weight="1"
+               android:src="@drawable/homeindicator"
+               app:tint="@color/d3d3d3"/>
+
+       </LinearLayout>
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/profilepic"
+            android:layout_width="34dp"
+            android:layout_height="34dp"
+            app:cardCornerRadius="70dp"
+            android:elevation="10dp"
+            android:layout_alignParentStart="true"
+            android:layout_marginTop="20dp"
+            android:layout_marginLeft="20dp">
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:src="@drawable/img_4"/>
+
+        </androidx.cardview.widget.CardView>
+        <TextView
+            android:id="@+id/username"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@id/profilepic"
+            android:layout_alignTop="@id/profilepic"
+            android:layout_marginStart="8dp"
+            android:text="jacob_w"
+            android:elevation="10dp"
+            android:gravity="center_vertical"
+            android:textColor="@color/white"/>
+        <TextView
+            android:id="@+id/uploadtime"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@id/username"
+            android:layout_alignTop="@id/username"
+            android:layout_marginStart="8dp"
+            android:text="4h"
+            android:elevation="10dp"
+            android:gravity="center_vertical"
+            android:textColor="@color/d3d3d3"/>
+        <ImageView
+            android:id="@+id/viewstoryclose"
+            android:layout_width="34dp"
+            android:layout_height="34dp"
+            android:layout_alignParentEnd="true"
+            android:layout_marginTop="20dp"
+            android:layout_marginLeft="20dp"
+            android:src="@drawable/close"
+            android:elevation="10dp"
+            android:gravity="center_vertical"
+            app:tint="@color/white"/>
+
+
+
+
+
+    </RelativeLayout>
+    <!-- Send Message Input Bar -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:background="@color/black"
+        android:padding="12dp"
+        android:gravity="center_vertical">
+
+        <!-- Outer Grey Rounded Card -->
+        <androidx.cardview.widget.CardView
+            android:layout_width="0dp"
+            android:layout_height="50dp"
+            android:layout_weight="1"
+            app:cardCornerRadius="24dp"
+            app:cardElevation="0dp"
+            app:cardBackgroundColor="@color/grey"
+            android:layout_marginEnd="12dp">
+
+            <!-- Inner Black Card -->
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="4dp"
+                app:cardCornerRadius="20dp"
+                app:cardElevation="0dp"
+                app:cardBackgroundColor="@color/black">
+
+                <!-- Row with Camera + EditText + Send -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal"
+                    android:gravity="center_vertical"
+                    android:paddingStart="8dp"
+                    android:paddingEnd="8dp">
+
+                    <!-- Camera Icon Circle -->
+                    <androidx.cardview.widget.CardView
+                        android:layout_width="36dp"
+                        android:layout_height="36dp"
+                        app:cardCornerRadius="18dp"
+                        app:cardElevation="0dp"
+                        app:cardBackgroundColor="@color/grey"
+                        android:layout_marginEnd="8dp">
+
+                        <ImageView
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:scaleType="centerInside"
+                            android:src="@drawable/camera"
+                            app:tint="@color/white"
+                            android:contentDescription="Camera" />
+                    </androidx.cardview.widget.CardView>
+
+                    <!-- Send Message Input -->
+                    <EditText
+                        android:id="@+id/message_input"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:background="@null"
+                        android:hint="Send Message"
+                        android:textColorHint="@color/d3d3d3"
+                        android:textColor="@color/white"
+                        android:textSize="14sp"
+                        android:gravity="center_vertical"
+                        android:inputType="textMultiLine|textCapSentences"
+                        android:maxLines="1"
+                        android:singleLine="true"
+                        android:imeOptions="actionSend" />
+
+                    <!-- Send Button -->
+
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+        </androidx.cardview.widget.CardView>
+        <ImageView
+            android:id="@+id/send_button"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:layout_marginStart="8dp"
+            android:src="@drawable/share1"
+            app:tint="@color/biege"
+            android:contentDescription="Send" />
+
+        <!-- More Options Button -->
+        <androidx.cardview.widget.CardView
+            android:layout_width="36dp"
+            android:layout_height="36dp"
+            app:cardCornerRadius="18dp"
+            app:cardElevation="0dp"
+            app:cardBackgroundColor="@color/transparent"
+            android:clickable="true"
+            android:focusable="true"
+            android:foreground="?android:attr/selectableItemBackground">
+
+            <ImageView
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:layout_gravity="center"
+                android:src="@drawable/options"
+                app:tint="@color/biege"
+                android:contentDescription="More options" />
+        </androidx.cardview.widget.CardView>
+    </LinearLayout>
+    <ImageView
+        android:layout_width="100dp"
+        android:layout_height="4dp"
+        android:layout_gravity="center"
+        app:tint="@color/biege"
+        android:elevation="10dp"
+        android:src="@drawable/homeindicator"/>
+
+</LinearLayout>
