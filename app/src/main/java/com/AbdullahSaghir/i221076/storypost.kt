@@ -6,6 +6,7 @@ import android.widget.ImageView
 import android.widget.Toast
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
+import androidx.cardview.widget.CardView
 
 class storypost : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -13,7 +14,7 @@ class storypost : AppCompatActivity() {
         enableEdgeToEdge()
         setContentView(R.layout.activity_storypost)
 
-        val btn = findViewById<ImageView>(R.id.btnclose)
+        val btn = findViewById<CardView>(R.id.btnclose)
 
         btn.setOnClickListener {
             try {

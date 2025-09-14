@@ -153,6 +153,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="vertical"
+
             android:paddingHorizontal="8dp"
             android:paddingBottom="16dp">
 
@@ -308,10 +309,10 @@
             <ImageView
                 android:id="@+id/searchhome"
                 android:layout_width="0dp"
-                android:layout_height="28dp"
+                android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:src="@drawable/shape"
                 android:contentDescription="Home"
+                android:src="@drawable/shape"
                 app:tint="@color/biege" />
 
             <ImageView

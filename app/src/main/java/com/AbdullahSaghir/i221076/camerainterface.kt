@@ -5,6 +5,7 @@ import android.os.Bundle
 import android.widget.ImageView
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
+import androidx.cardview.widget.CardView
 
 class camerainterface : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -12,8 +13,8 @@ class camerainterface : AppCompatActivity() {
         enableEdgeToEdge()
         setContentView(R.layout.activity_camerainterface)
 
-        val story = findViewById<ImageView>(R.id.camera_capture_button)
-        val backtick = findViewById<ImageView>(R.id.backtomain)
+        val story = findViewById<CardView>(R.id.camera_capture_button)
+        val backtick = findViewById<CardView>(R.id.backtomain)
 
         // Navigate to StoryPost page after capture
         story.setOnClickListener {
